@@ -18,16 +18,17 @@ public class Emailsend1 {
 		Session session = Session.getInstance(props);
 		session.setDebug(true);
 		Message msg = new MimeMessage(session);
-		msg.setSubject("Àî×ÓÃ÷²âÊÔSendEmail");
-		msg.setText("²âÊÔÄÚÈİ");
-		msg.setFrom(new InternetAddress("2010007117@qq.com"));//·¢¼şÈË
-		msg.setRecipient(Message.RecipientType.TO, new InternetAddress("1304464432@qq.com"));//ÊÕ¼şÈËÓÊÏä1304464432
+		msg.setSubject("æå­æ˜æµ‹è¯•SendEmail");
+		msg.setText("æµ‹è¯•å†…å®¹");
+		msg.setFrom(new InternetAddress("2010007117@qq.com"));//å‘ä»¶äºº
+		msg.setRecipient(Message.RecipientType.TO, new InternetAddress("1304464432@qq.com"));//æ”¶ä»¶äººé‚®ç®±1304464432
 		msg.saveChanges();
 		Transport transport = session.getTransport();
-		transport.connect("2010007117@qq.com", "zhwqpzmlfiixdbed");//·¢¼şÈËÓÊÏä  ÊÚÈ¨Âë
+		transport.connect("2010007117@qq.com", "zhwqpzmlfiixdbed");//å‘ä»¶äººé‚®ç®±  æˆæƒç 
 		transport.sendMessage(msg, msg.getAllRecipients());
         
-        System.out.println("ÓÊ¼ş·¢ËÍ³É¹¦...");
+        System.out.println("é‚®ä»¶å‘é€æˆåŠŸ...");
+		System.out.println("é‚®ä»¶å‘é€æˆåŠŸ...");
         transport.close();
 	}
 }
